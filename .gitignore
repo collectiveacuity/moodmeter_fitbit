@@ -1,6 +1,7 @@
 ###############  .gitignore   ##################
 
 ################ credentials  ##################
+.lab/
 cred/
 keys/
 
@@ -9,6 +10,10 @@ publicity/
 data/
 
 ############### distro files  ##################
+.webassets-cache/
+hooks/
+plugins/
+site/
 build/
 .Python
 develop-eggs/
@@ -28,6 +33,7 @@ docs/_build/
 target/
 
 ###############   IDE files   ##################
+.~lock.*
 .DS_STORE
 .netbeans
 nbproject
@@ -40,4 +46,26 @@ __pycache__
 desktop.ini
 *.gdoc
 
+#################   data files    #################
+appdata/
 
+#################  unit testing   #################
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+#################  dependencies   #################
+node_modules/
+
+################# version control #################
+.hg/
+.git/
+.hgignore
+
+#################   backup sync   #################
+.dropbox
+Thumbs.db
