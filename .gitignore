@@ -48,6 +48,7 @@ desktop.ini
 
 #################   data files    #################
 appdata/
+server/assets/
 
 #################  unit testing   #################
 htmlcov/
