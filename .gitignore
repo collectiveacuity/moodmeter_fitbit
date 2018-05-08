@@ -47,8 +47,7 @@ desktop.ini
 *.gdoc
 
 #################   data files    #################
-appdata/
-server/assets/
+tinker/
 
 #################  unit testing   #################
 htmlcov/
@@ -64,8 +63,6 @@ node_modules/
 
 ################# version control #################
 .hg/
-.git/
-.hgignore
 
 #################   backup sync   #################
 .dropbox
