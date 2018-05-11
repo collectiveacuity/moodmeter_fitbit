@@ -1,0 +1,21 @@
+{
+  "fitbit": {
+    "appUUID": "9ba78917-631a-4410-8c30-92e5ed69f002",
+    "appType": "app",
+    "appDisplayName": "Mood Meter",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_internet"
+    ],
+    "buildTargets": [
+      "higgs",
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "Mood Meter"
+      }
+    }
+  }
+}

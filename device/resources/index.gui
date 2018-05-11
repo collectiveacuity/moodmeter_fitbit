@@ -1,0 +1,97 @@
+<svg>
+  <use id="mood-container" href="#panoramaview">
+    <use id="page1" href="#panoramaview-item">
+      <use id="instructions" href="#mixed-text-center-top" height="100%" y="16" fill="fb-yellow">
+        <set href="#header/text" attributeName="text-buffer" to="Mood Meter"/>
+        <set href="#copy/text" attributeName="text-buffer" to="To report your mood, scroll <<< or >>> and select the emotion that best matches how you feel."/>
+      </use> 
+    </use>
+    <use id="page2" href="#panoramaview-item">
+      <use id="page2-tl" href="#push-button" class="tl-corner">
+        <image id="page2-tl-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page2-tl-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page2-tr" href="#push-button" class="tr-corner">
+        <image id="page2-tr-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page2-tr-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page2-bl" href="#push-button" class="bl-corner">
+        <image id="page2-bl-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page2-bl-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page2-br" href="#push-button" class="br-corner">
+        <image id="page2-br-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page2-br-txt" class="quadrant-label">Mood</text>
+      </use>
+    </use>
+    <use id="page3" href="#panoramaview-item">
+      <use id="page3-tl" href="#push-button" class="tl-corner">
+        <image id="page3-tl-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page3-tl-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page3-tr" href="#push-button" class="tr-corner">
+        <image id="page3-tr-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page3-tr-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page3-bl" href="#push-button" class="bl-corner">
+        <image id="page3-bl-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page3-bl-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page3-br" href="#push-button" class="br-corner">
+        <image id="page3-br-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page3-br-txt" class="quadrant-label">Mood</text>
+      </use>
+    </use>
+    <use id="page4" href="#panoramaview-item">
+      <use id="page4-tl" href="#push-button" class="tl-corner">
+        <image id="page4-tl-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page4-tl-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page4-tr" href="#push-button" class="tr-corner">
+        <image id="page4-tr-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page4-tr-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page4-bl" href="#push-button" class="bl-corner">
+        <image id="page4-bl-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page4-bl-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page4-br" href="#push-button" class="br-corner">
+        <image id="page4-br-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page4-br-txt" class="quadrant-label">Mood</text>
+      </use>
+    </use>
+    <!-- Have enough pagination dots for your slides (extras are hidden) -->
+    <use id="pagination-dots" href="#pagination-widget" y="8">
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-highlight-dot" />
+    </use>
+  </use>
+  <svg id="mood-check" display="none">
+    <use id="mood-check-button" href="#push-button" class="popup-button">
+      <use href="#mixed-text-center-mid" height="100%" fill="fb-yellow">
+        <set href="#header/text" attributeName="text-buffer" to="Mood Check"/>
+        <set href="#copy/text" attributeName="text-buffer" to="Select the emotion that matches how you feel right now."/>
+      </use>
+    </use>
+  </svg>
+  <svg id="mood-confirm" display="none">
+    <use id="mood-confirm-button" href="#push-button" class="popup-button">
+      <svg id="mood-confirm-wait">
+        <text id="mood-confirm-status" class="center-text">Sending Report...</text> 
+      </svg>
+      <svg id="mood-confirm-logged" class="popup-button" display="none">
+        <image id="mood-confirm-icon" class="center-icon" href="icons/smile-160.png" load="sync" />
+        <text id="mood-confirm-text" class="center-label">{ ... }</text>
+      </svg>
+      <svg id="mood-confirm-advice" class="popup-button" display="none">
+        <text id="mood-confirm-callback" class="center-title">Report Logged</text>
+        <textarea id="mood-confirm-tip" class="center-description">{...}</textarea>
+      </svg>
+    </use>
+  </svg>
+</svg>
