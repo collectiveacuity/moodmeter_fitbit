@@ -2,7 +2,7 @@
   <use id="mood-container" href="#panoramaview">
     <use id="page1" href="#panoramaview-item">
       <use id="instructions" href="#mixed-text-center-top" height="100%" y="16" fill="fb-yellow">
-        <set href="#header/text" attributeName="text-buffer" to="Mood Meter"/>
+        <set href="#header/text" attributeName="text-buffer" to="Mood Journal"/>
         <set href="#copy/text" attributeName="text-buffer" to="To report your mood, scroll <<< or >>> and select the emotion that best matches how you feel."/>
       </use> 
     </use>
@@ -58,6 +58,24 @@
       <use id="page4-br" href="#push-button" class="br-corner">
         <image id="page4-br-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
         <text id="page4-br-txt" class="quadrant-label">Mood</text>
+      </use>
+    </use>
+    <use id="page5" href="#panoramaview-item">
+      <use id="page5-tl" href="#push-button" class="tl-corner">
+        <image id="page5-tl-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page5-tl-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page5-tr" href="#push-button" class="tr-corner">
+        <image id="page5-tr-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page5-tr-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page5-bl" href="#push-button" class="bl-corner">
+        <image id="page5-bl-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page5-bl-txt" class="quadrant-label">Mood</text>
+      </use>
+      <use id="page5-br" href="#push-button" class="br-corner">
+        <image id="page5-br-img" fill="fb-white" class="quadrant-icon" href="icons/smile.png" load="sync" />
+        <text id="page5-br-txt" class="quadrant-label">Mood</text>
       </use>
     </use>
     <!-- Have enough pagination dots for your slides (extras are hidden) -->

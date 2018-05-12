@@ -1,12 +1,13 @@
 {
   "fitbit": {
-    "appUUID": "9ba78917-631a-4410-8c30-92e5ed69f002",
+    "appUUID": "83676c6c-4cdb-4dff-9a83-60c4b1575311",
     "appType": "app",
-    "appDisplayName": "Mood Meter",
+    "appDisplayName": "Moodz",
     "iconFile": "resources/icon.png",
     "wipeColor": "#607d8b",
     "requestedPermissions": [
-      "access_internet"
+      "access_internet",
+      "access_heart_rate"
     ],
     "buildTargets": [
       "higgs",
@@ -14,7 +15,7 @@
     ],
     "i18n": {
       "en": {
-        "name": "Mood Meter"
+        "name": "Moodz"
       }
     }
   }

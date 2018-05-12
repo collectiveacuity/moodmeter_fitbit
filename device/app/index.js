@@ -4,6 +4,7 @@ import document from "document";
 import * as fs from "fs";
 import * as messaging from "messaging";
 import { MOOD_MAP, MOOD_LIST } from "../common/globals.js";
+import { HeartRateSensor } from "heart-rate";
 
 // Prototype methods
 Date.prototype.toIsoString = function() {
@@ -24,6 +25,7 @@ Date.prototype.toIsoString = function() {
         dif + pad(tzo / 60) +
         ':' + pad(tzo % 60);
 }
+
 
 // Retrieve document elements
 let moodContain = document.getElementById("mood-container");
@@ -49,6 +51,25 @@ try {
 } catch (e) {
   fs.writeFileSync("instructions_read.txt", [], "cbor")
   moodContain.value = 0; // show instructions
+}
+
+// Define heart rate monitoring
+var hrm = new HeartRateSensor();
+var bpm = null;
+function readHRM(){
+  return new Promise(function(resolve, reject) {
+    hrm.onreading = function() {
+
+      // Report the current sensor values
+      console.log("Current heart rate: " + hrm.heartRate);
+      bpm = hrm.heartRate
+
+      // Stop monitoring the sensor
+      hrm.stop();
+      resolve(bpm);
+    }
+    hrm.start();
+  });
 }
 
 // Define report data function
@@ -115,12 +136,22 @@ function constructMoods(mood_settings=null) {
     
   // Bind listener to button
     moodButton.onclick = function(evt){
-      let dt = new Date()
-      reportData({mood: mood_name, dt: dt.getTime() / 1000, iso: dt.toIsoString() })
+      if (bpm == null){
+        readHRM().then(function(bpm){
+          let dt = new Date()
+          reportData({mood: mood_name, dt: dt.getTime() / 1000, iso: dt.toIsoString(), bpm: bpm})
+        })
+      } else {
+        let dt = new Date()
+        reportData({mood: mood_name, dt: dt.getTime() / 1000, iso: dt.toIsoString(), bpm: bpm})
+      }
     }
   }
  
 }
+
+// Read current heartrate
+readHRM()
 
 // Construct mood buttons
 constructMoods()
@@ -131,7 +162,8 @@ moodConfirmButton.onclick = function(evt) {
   moodConfirmLogged.style.display = "none";
   moodConfirmAdvice.style.display = "none";
   moodConfirmWait.style.display = "inline";
-  moodConfirmCallback.text = "Report Logged"
+  moodConfirmCallback.text = "Report Logged";
+  bpm = null;
 }
 
 // Bind trigger to prompt
@@ -173,6 +205,7 @@ messaging.peerSocket.onmessage = function(evt) {
       moodConfirmTip.text = log_msg
       moodConfirmAdvice.style.display = "inline"
       moodConfirmWait.style.display = "none"
+     
     }
  
   // Report Error

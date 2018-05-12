@@ -8,7 +8,9 @@ import { settingsStorage } from "settings";
 // Define api endpoint
 var api_token = ""
 var token_setting = JSON.parse(settingsStorage.getItem('token'))
-if (token_setting.name != undefined){ 
+if (!token_setting || token_setting.name === undefined){
+  api_token = ""
+} else {
   api_token = token_setting.name 
 }
 var api_endpoint = "https://moodhq.herokuapp.com"
@@ -28,7 +30,7 @@ function postReport(data) {
   })
   .catch(function (err) {
     let error_title = "Reporting Error"
-    let error_desc = err
+    let error_desc = JSON.stringify(err)
     console.log("Error posting report: " + err);
     messaging.peerSocket.send({action: "error", content: { title: error_title, description: error_desc } })
   });
