@@ -97,7 +97,7 @@
       </use>
     </use>
   </svg>
-  <svg id="mood-confirm" display="none">
+  <svg id="mood-submit" display="none">
     <use id="mood-confirm-button" href="#push-button" class="popup-button">
       <svg id="mood-confirm-wait">
         <text id="mood-confirm-status" class="center-text">Sending Report...</text> 

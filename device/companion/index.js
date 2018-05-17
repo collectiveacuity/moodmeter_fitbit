@@ -21,19 +21,22 @@ function postReport(data) {
   let data_field = encodeURIComponent(JSON.stringify(data))
   let report_url = api_endpoint + '/mood?data=' + data_field + '&token=' + api_token
   fetch(report_url)
-  .then(function (response) {
+  .then(function(response){
       response.json()
       .then(function(response_data) {
         console.log(JSON.stringify(response_data))
-        messaging.peerSocket.send({action: "report_callback", content: response_data })
+        if (response_data.error){
+          messaging.peerSocket.send({action: "error", content: { title: "Reporting Error", description: response_data.error }})
+        } else {
+          messaging.peerSocket.send({action: "report_callback", content: response_data })
+        }
       });
-  })
-  .catch(function (err) {
-    let error_title = "Reporting Error"
+    })
+ .catch(function (err) {
     let error_desc = JSON.stringify(err)
-    console.log("Error posting report: " + err);
-    messaging.peerSocket.send({action: "error", content: { title: error_title, description: error_desc } })
-  });
+    console.log("Error posting report: " + error_desc);
+    messaging.peerSocket.send({action: "error", content: { title: "Reporting Error", description: error_desc } })
+  })
 }
 
 // Define settings update method
