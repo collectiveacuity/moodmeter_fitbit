@@ -108,7 +108,7 @@ settingsStorage.onchange = function(evt) {
     sleep: sleep_setting ? sleep_setting.value : ""
   };
   if (api_token){
-    putSettings(settings_data)
+    // putSettings(settings_data)
   }
 
 };
