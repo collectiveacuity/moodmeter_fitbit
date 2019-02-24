@@ -15,7 +15,7 @@ export class HeartMonitor {
   // add reading method
   reading(){
   
-    let self = this
+    let self = this;
     
     return new Promise(function(resolve, reject) {
       
@@ -23,12 +23,12 @@ export class HeartMonitor {
         
         // Report the current sensor values
         console.log("Current heart rate: " + self.hrm.heartRate);
-        self.bpm = self.hrm.heartRate
+        self.bpm = self.hrm.heartRate;
 
         // Stop monitoring and return bpm reading
         self.hrm.stop();
         resolve(self.bpm);
-      }
+      };
       
       self.hrm.onerror = function(err) {
         

@@ -4,8 +4,13 @@ let system_environment = 'dev';
 
 // Import dependencies
 import { HeartMonitor } from "./hrm.js";
-import { DeviceSocket } from "./socket.js"
+import { DeviceSocket } from "./socket.js";
+import { GeoLocation } from "./geo.js";
 import { MoodUI } from "./ui.js";
+
+// Activate GPS locator
+let gps = new GeoLocation();
+gps.reading();
 
 // Activate heart rate monitor and take reading
 let hrm = new HeartMonitor();
@@ -16,7 +21,7 @@ let device_socket = new DeviceSocket();
 device_socket.bind();
 
 // Construct UI, determine landing view, draw buttons and bind triggers
-let mood_ui = new MoodUI(device_socket, hrm);
+let mood_ui = new MoodUI(device_socket, hrm, gps);
 mood_ui.landing();
 mood_ui.moods();
 mood_ui.bind();
