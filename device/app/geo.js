@@ -26,6 +26,9 @@ export class GeoLocation {
         console.log('Message: ' + error.message);
         reject(error)
       })
+      setTimeout(function(){
+        reject('timeout')
+      }, 10000)
       
     })
     

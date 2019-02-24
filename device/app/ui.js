@@ -56,7 +56,8 @@ export class MoodUI {
   
   // add status message callables
   hrmStatus(){ this.statusMessage('Reading heart rate...') }
-  gpsStatus(){ this.statusMessage('Reading GPS location...')}
+  gpsStatus(){ this.statusMessage('Reading GPS location...') }
+  gpsFail(){ this.statusMessage('No GPS available. Skip.') }
   reportStatus(){ this.statusMessage('Sending report...') }
 
   // add method to bind triggers
@@ -198,7 +199,8 @@ export class MoodUI {
           self.gps.reading().then(function(coords){
             _sending_data(coords[0], coords[1])
           }).catch(function(err){
-            _sending_data(null)
+            self.gpsFail();
+            _sending_data(null, null);
           })
         } else {
           _sending_data(self.gps.latitude, self.gps.longitude)
@@ -211,4 +213,3 @@ export class MoodUI {
   }
   
 }
-
