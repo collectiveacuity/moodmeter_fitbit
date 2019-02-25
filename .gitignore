@@ -47,17 +47,7 @@ desktop.ini
 *.gdoc
 
 #################   data files    #################
-tinker/
-device_dev/
-docs
-docs_dev/
-icons/
-notes/
-server/
-mkdocs.yml
-README.md
-example_data.json
-example_plot.svg
+
 
 #################  unit testing   #################
 htmlcov/
@@ -74,9 +64,6 @@ node_modules/
 ################# version control #################
 .hg/
 .hgignore
-.dockerignore
-docker-compose.yaml
-Dockerfile
 
 #################   backup sync   #################
 .dropbox
