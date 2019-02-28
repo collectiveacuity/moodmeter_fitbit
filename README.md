@@ -1,4 +1,4 @@
-# Moodz
+# Mood Meter
 _A Mood Tracking Tool for Cognitive Behavioral Therapy_  
 **by [Collective Acuity](https://collectiveacuity.com/)**  
   
@@ -6,7 +6,7 @@ _A Mood Tracking Tool for Cognitive Behavioral Therapy_
 
 Introduction
 ------------
-Moodz is a wearable mood journal designed for the Fitbit smartwatch. Moodz makes it easy for patients in Cognitive Behavioral Therapy to record their emotional state throughout the day. Moodz also provides a dashboard for both patient and therapist to review mood reports and establish strategies to address the triggers that cause destructive emotions.
+Mood Meter is a wearable mood journal designed for the Fitbit smartwatch. Mood Meter makes it easy for patients in Cognitive Behavioral Therapy to record their emotional state throughout the day. Mood Meter also provides a dashboard for both patient and therapist to review mood reports and establish strategies to address the triggers that cause destructive emotions.
 
 Benefits
 --------
@@ -18,6 +18,7 @@ Features
 --------
 - Report your mood in one tap
 - Review your mood history online
+- Time and location recorde
 - Setup prompts to check your mood periodically
 - Setup notification of a caregiver for mood change
 

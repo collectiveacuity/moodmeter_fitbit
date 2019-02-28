@@ -2,7 +2,7 @@
   "fitbit": {
     "appUUID": "83676c6c-4cdb-4dff-9a83-60c4b1575311",
     "appType": "app",
-    "appDisplayName": "Moodz",
+    "appDisplayName": "Mood Meter",
     "iconFile": "resources/icon.png",
     "wipeColor": "#607d8b",
     "requestedPermissions": [
@@ -15,7 +15,7 @@
     ],
     "i18n": {
       "en": {
-        "name": "Moodz"
+        "name": "Mood Meter"
       }
     }
   }
