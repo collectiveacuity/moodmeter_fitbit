@@ -18,14 +18,11 @@ Features
 --------
 - Report your mood in one tap
 - Review your mood history online
-- Time and location recorde
-- Setup prompts to check your mood periodically
-- Setup notification of a caregiver for mood change
+- Time and location recorded with each mood
+- TODO: Compare mood with general population along affective dimensions
 
 Requirements
 ------------
-- Dependencies listed in Dockerfile
-- Credentials from third-party services
 - FitBit Ionic or Versa
 
 Installation
