@@ -25,10 +25,10 @@ export class GeoLocation {
       }, function(error){
         console.log('Message: ' + error.message);
         reject(error)
-      })
+      });
       setTimeout(function(){
         reject('timeout')
-      }, 10000)
+      }, 12000)
       
     })
     

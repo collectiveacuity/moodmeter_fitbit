@@ -178,10 +178,14 @@ export class MoodUI {
           let data = {
             mood: mood_name, 
             dt: dt.getTime() / 1000, 
-            iso: dt.toIsoString(), 
-            lat: lat,
-            lon: lon
+            iso: dt.toIsoString()
           };
+          if (lat){
+            data.lat = lat
+          }
+          if (lon){
+            data.lon = lon
+          }
           self.reportStatus();
           self.deviceSocket.sendingData('report', data).then(function(){
             self.gps.reset();
